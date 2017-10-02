@@ -4,9 +4,6 @@
 #include "CImg.h"
 
 int main() {
-    const unsigned char black[] = { 0, 0, 0 };
-    ShowWindow(GetConsoleWindow(), SW_HIDE);
-
     const unsigned short
             x = static_cast<const unsigned short>(GetSystemMetrics(SM_CXSCREEN )),
             y = 0;

@@ -8,7 +8,12 @@ set(SOURCE_FILES
         src/CImg.h
         CMakeSetup.rc)
 
+# Add libraries statically for standalone executable
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -static-libgcc -static-libstdc++")
+
+# Add flags to hide console
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}  -Wl,-subsystem,windows")
+
 add_executable(BlackCurtain ${SOURCE_FILES})
 
 if( CMAKE_BUILD_TYPE EQUAL "Release")
